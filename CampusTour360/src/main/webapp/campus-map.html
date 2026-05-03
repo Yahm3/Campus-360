@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map - Campus Tour 360</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+    <link rel="stylesheet" href="css/campus-map.css">
+</head>
+<body>
+    <script>
+    imageMapResize();
+</script>
+    <header>
+        <a class="back-to-previous" href="menu.html">back</a>
+        <div class="center-heading">
+          <h1 class="heading">Campus Tour 360</h1>
+        </div>
+    </header>
+    <map name="locations">
+        <area shape="rect" coords="3991,3281,4321,3576" href="menu.html" alt="">
+    </map>
+    <img class="campus-map" usemap="#locations" src="images/campus-map/campus-map.png" alt="">
+</body>
+</html>

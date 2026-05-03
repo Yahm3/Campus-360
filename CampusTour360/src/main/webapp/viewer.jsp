@@ -15,20 +15,28 @@
             <h2>Currently viewing: ${locationName}</h2>
         </header>
 
-        <div id="panorama"></div>
+        <div id="panorama" style="width:100%; height:100vh;"></div>
+
         <script>
             pannellum.viewer('panorama', {
                 "type": "equirectangular",
-                "panorama": "${imagePath}", // Java injects the image path here!
+                "panorama": "${imagePath}",
                 "autoLoad": true,
                 "compass": true,
+                "hotSpotDebug": true,
                 "hotSpots": [
                     {
                         "pitch": 0,
                         "yaw": 110,
                         "type": "info",
                         "text": "Go to next area",
-                        // Java injects the next ID here so the arrow works!
+                        "URL": "tour?id=${nextId}"
+                    },
+                    {
+                        "pitch": 1.98,
+                        "yaw": 97.16,
+                        "type": "info",
+                        "text": "Go to next area",
                         "URL": "tour?id=${nextId}"
                     }
                 ]

@@ -1,0 +1,153 @@
+:root {
+  --regal-navy: hsla(214, 100%, 26%, 1);
+  --flag-red: hsla(353, 85%, 44%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --sunflower-gold: hsla(45, 85%, 49%, 1);
+}
+
+* {
+    /* general attributes */
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS";
+}
+
+body {
+    /* background */
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(../images/index-background-2.jpg);
+  background-size: cover;
+
+}
+
+*::selection {
+  background-color: var(--sunflower-gold);
+}
+
+/* header */
+header {
+  padding: 2vh;
+  /* background blur effect */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition-duration: 500ms;
+}
+
+header:hover {
+    /* background blur effect when hovering */
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px) saturate(200%) brightness(110%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-to-previous {
+  position: absolute;
+  padding: 8px;
+}
+
+.center-heading {
+  text-align: center;
+}
+
+.load {
+  /* position the .center-box in the middle */
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto auto auto;
+  height: 100vh;
+  /* Loading effect */
+  animation: load 500ms ease-in-out forwards;
+  filter: blur(30px);
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@keyframes load {
+  to {
+    filter: blur(0px);
+    opacity: 1;
+    transform: scale(1);
+  } 
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+  margin: 10px;
+  padding-bottom: 20px;
+  color: rgb(64, 64, 64);
+}
+
+/* all option Boxes */
+.button {
+  color: var(--white);
+  background-color: var(--regal-navy);
+  font-size: 20px;
+  /* top right bottom left */
+  padding: 15px 30px 15px 30px;
+  border-radius: 50px;
+  border-width: 0;
+  margin: 40px 0px 0px 0px;
+  transition-duration: 500ms;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--sunflower-gold);
+  /* float effect when hovering */
+  transform: scale(1.08);
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.map-option-box,
+.search-option-box {
+  /* background blur effect */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* general attributes */
+  border-radius: 50px;
+  padding: 35px;
+  text-align: center;
+  /* transition */
+  transition: 500ms ease-in-out;
+  /* width and height */
+  width: 350px;
+  height: 550px;
+}
+
+.map-option-box:hover,
+.search-option-box:hover {
+  /* background blur effect when hovering */
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px) saturate(200%) brightness(110%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* float effect when hovering */
+  transform: scale(1.08);
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.map-option-image,
+.search-option-image {
+  width: 325px;
+  margin: 5px 0px 0px 0px;
+  transition: 500ms;
+  border-radius: 50px;
+}
+
+.map-option-image:hover,
+.search-option-image:hover {
+  cursor: pointer;
+  /* float effect when hovering */
+  transform: scale(1.08);
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}

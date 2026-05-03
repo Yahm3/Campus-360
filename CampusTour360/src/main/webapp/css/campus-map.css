@@ -1,0 +1,73 @@
+:root {
+  --regal-navy: hsla(214, 100%, 26%, 1);
+  --flag-red: hsla(353, 85%, 44%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --sunflower-gold: hsla(45, 85%, 49%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS';
+/* hids scrollbars */
+  overflow: hidden;
+}
+
+*::selection {
+  background-color: var(--sunflower-gold);
+}
+
+body {
+  /* background-image: url(/src/main/webapp/images/campus-map/campus-map.png);
+  background-size: cover;  background-image: url(/src/main/webapp/images/campus-map/campus-map.png); */
+  position: relative;
+}
+
+/* header */
+header {
+  padding: 2vh;
+  /* background blur effect */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition-duration: 500ms;
+}
+
+header:hover {
+    /* background blur effect when hovering */
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px) saturate(200%) brightness(110%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-to-previous {
+  position: absolute;
+  padding: 8px;
+}
+
+.center-heading {
+  text-align: center;
+}
+
+/* campus map */
+.campus-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.location {
+  position: relative;
+  left: 20px;
+  padding: 20px;
+  background-color: red;
+}
+
+area {
+    outline: 5px solid red;
+}
+
+area:hover {
+  cursor: pointer;
+}
